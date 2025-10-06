@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on AI/ML for ESS</title>
-    <link>https://levuvietphong.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on AI/ML for ESS</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://levuvietphong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Foundational Model</title>
-      <link>https://levuvietphong.github.io/tags/foundational-model/</link>
+      <link>http://localhost:1313/tags/foundational-model/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/tags/foundational-model/</guid>
+      <guid>http://localhost:1313/tags/foundational-model/</guid>
       <description></description>
     </item>
     <item>
       <title>Diffusion Model</title>
-      <link>https://levuvietphong.github.io/tags/diffusion-model/</link>
+      <link>http://localhost:1313/tags/diffusion-model/</link>
       <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/tags/diffusion-model/</guid>
+      <guid>http://localhost:1313/tags/diffusion-model/</guid>
       <description></description>
     </item>
     <item>
       <title>CNN Model</title>
-      <link>https://levuvietphong.github.io/tags/cnn-model/</link>
+      <link>http://localhost:1313/tags/cnn-model/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/tags/cnn-model/</guid>
+      <guid>http://localhost:1313/tags/cnn-model/</guid>
       <description></description>
     </item>
     <item>
       <title>Transformer Model</title>
-      <link>https://levuvietphong.github.io/tags/transformer-model/</link>
+      <link>http://localhost:1313/tags/transformer-model/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/tags/transformer-model/</guid>
+      <guid>http://localhost:1313/tags/transformer-model/</guid>
       <description></description>
     </item>
   </channel>

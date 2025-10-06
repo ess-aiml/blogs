@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on AI/ML for ESS</title>
-    <link>https://levuvietphong.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on AI/ML for ESS</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://levuvietphong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Earth Foundational Models - An Introduction (Part 2) -- Test</title>
-      <link>https://levuvietphong.github.io/posts/earth-foundational-models-part2/</link>
+      <link>http://localhost:1313/posts/earth-foundational-models-part2/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/posts/earth-foundational-models-part2/</guid>
+      <guid>http://localhost:1313/posts/earth-foundational-models-part2/</guid>
       <description>A beginner’s guide to the powerful models shaping the future of Earth science</description>
       <content:encoded><![CDATA[<blockquote>
 <p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
@@ -28,16 +28,16 @@
     </item>
     <item>
       <title>What are Diffusion Models? -- Test</title>
-      <link>https://levuvietphong.github.io/posts/intro-diffusion-models/</link>
+      <link>http://localhost:1313/posts/intro-diffusion-models/</link>
       <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/posts/intro-diffusion-models/</guid>
+      <guid>http://localhost:1313/posts/intro-diffusion-models/</guid>
       <description>A beginner’s guide to diffusion models</description>
     </item>
     <item>
       <title>Earth Foundational Models - An Introduction (Part 1) -- Test</title>
-      <link>https://levuvietphong.github.io/posts/earth-foundational-models-part1/</link>
+      <link>http://localhost:1313/posts/earth-foundational-models-part1/</link>
       <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://levuvietphong.github.io/posts/earth-foundational-models-part1/</guid>
+      <guid>http://localhost:1313/posts/earth-foundational-models-part1/</guid>
       <description>A beginner’s guide to the powerful models shaping the future of Earth science</description>
       <content:encoded><![CDATA[<blockquote>
 <p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
