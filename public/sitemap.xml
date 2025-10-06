@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/</loc>
     <lastmod>2025-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/posts/</loc>
     <lastmod>2025-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/earth-foundational-models-part2/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/posts/earth-foundational-models-part2/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/foundational-model/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tags/foundational-model/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tags/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/diffusion-model/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tags/diffusion-model/</loc>
     <lastmod>2025-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/intro-diffusion-models/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/posts/intro-diffusion-models/</loc>
     <lastmod>2025-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/earth-foundational-models-part1/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/posts/earth-foundational-models-part1/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cnn-model/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tags/cnn-model/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/stories/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/stories/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/stories/story1/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/stories/story1/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/transformer-model/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tags/transformer-model/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tutorials/tutorial1/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tutorials/tutorial1/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tutorials/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/tutorials/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://levuvietphong.github.io/ess-ai-ml/search/</loc>
   </url>
 </urlset>
