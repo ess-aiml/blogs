@@ -12,7 +12,7 @@ showToc: true
 TocOpen: false
 draft: false
 hidemeta: false
-comments: false
+comments: true
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -25,16 +25,16 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: images/Earth_foundational_model_AI.jpeg
+  image: images/DOFA1.png
   alt: "<alt text>" # alt text
-  caption: Photo by deepai.org
+  caption: "The Dynamic One-For-All (DOFA) model is a multimodal foundation model tailored for remote sensing and Earth observation tasks (Source: esri.com)"
   # relative: false # when using page bundles set this to true
   # hidden: true # only hide on current single page
   hiddenInList: true
 social:
   fediverse_creator: "@Phong Le - ORNL"
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/ess-ai-ml/content/posts/Earth-Foundational-Models-part2/index.md"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---

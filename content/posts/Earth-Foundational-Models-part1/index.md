@@ -34,7 +34,7 @@ cover:
 social:
   fediverse_creator: "@Phong Le - ORNL"
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/ess-ai-ml/content/posts/Earth-Foundational-Models-part1/index.md"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---

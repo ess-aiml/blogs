@@ -32,3 +32,5 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+Diffusion models are a type of generative AI that create data by learning to reverse a process of gradually adding noise, turning random noise into realistic images, audio, or text. They are powerful because they generate high-quality results and are more stable to train than GANs.
