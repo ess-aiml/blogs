@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI/ML for ESS</title>
+    <link>https://levuvietphong.github.io/</link>
+    <description>Recent content on AI/ML for ESS</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://levuvietphong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Earth Foundational Models - An Introduction (Part 2) -- Test</title>
+      <link>https://levuvietphong.github.io/posts/earth-foundational-models-part2/</link>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/posts/earth-foundational-models-part2/</guid>
+      <description>A beginner’s guide to the powerful models shaping the future of Earth science</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
+<p>There are 5 key characteristics of Foundation Models:</p>
+<ol>
+<li>Pretrained (using large data and massive compute so that it is ready to be used without any additional training)</li>
+<li>Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)</li>
+<li>Adaptable (through prompting — the input to the model using say text)</li>
+<li>Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)</li>
+<li>Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>What are Diffusion Models? -- Test</title>
+      <link>https://levuvietphong.github.io/posts/intro-diffusion-models/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/posts/intro-diffusion-models/</guid>
+      <description>A beginner’s guide to diffusion models</description>
+    </item>
+    <item>
+      <title>Earth Foundational Models - An Introduction (Part 1) -- Test</title>
+      <link>https://levuvietphong.github.io/posts/earth-foundational-models-part1/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/posts/earth-foundational-models-part1/</guid>
+      <description>A beginner’s guide to the powerful models shaping the future of Earth science</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
+<p>There are 5 key characteristics of Foundation Models:</p>
+<ol>
+<li>Pretrained (using large data and massive compute so that it is ready to be used without any additional training)</li>
+<li>Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)</li>
+<li>Adaptable (through prompting — the input to the model using say text)</li>
+<li>Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)</li>
+<li>Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Story 1 title</title>
+      <link>https://levuvietphong.github.io/stories/story1/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/stories/story1/</guid>
+      <description>sub-title of the story</description>
+    </item>
+    <item>
+      <title>Tutorial 1st post</title>
+      <link>https://levuvietphong.github.io/tutorials/tutorial1/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/tutorials/tutorial1/</guid>
+      <description>Tutorial introduction</description>
+    </item>
+  </channel>
+</rss>

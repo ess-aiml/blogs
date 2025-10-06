@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Diffusion Model on AI/ML for ESS</title>
+    <link>https://levuvietphong.github.io/tags/diffusion-model/</link>
+    <description>Recent content in Diffusion Model on AI/ML for ESS</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://levuvietphong.github.io/tags/diffusion-model/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What are Diffusion Models? -- Test</title>
+      <link>https://levuvietphong.github.io/posts/intro-diffusion-models/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://levuvietphong.github.io/posts/intro-diffusion-models/</guid>
+      <description>A beginner’s guide to diffusion models</description>
+    </item>
+  </channel>
+</rss>

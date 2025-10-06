@@ -1,0 +1,61 @@
+baseURL: "https://levuvietphong.github.io/"
+languageCode: en-us
+title: AI/ML for ESS
+theme: ["PaperMod"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # necessary for search
+
+taxonomies:
+    category: categories
+    tag: tags
+
+params:
+    defaultTheme: dark
+    homeInfoParams:
+        Title: "Welcome to AI/ML for ESS Blog 🧬"
+        Content: Welcome to the blog, where we explore the role of AI and ML in advancing Environmental System Science (ESS). Here, you’ll find updates, insights, and discussions from our ESS community.
+    socialIcons:
+        - name: email
+          url: "mailto:some@emailadres.com"
+
+    ShowReadingTime: true
+    ShowTags: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowToc: true
+    ShowFullTextinRSS: true
+    ShowAllPagesInArchive: true #
+    ShowAllPagesInHome: true
+    ShowAllPagesInSearch: true
+    buildFuture: true
+
+menu:
+    main:
+        - identifier: archives
+          name: Archive
+          url: /archives
+          weight: 4
+        - identifier: search
+          name: Search
+          url: /search
+          weight: 5
+        - identifier: posts
+          name: Posts
+          url: /posts
+          weight: 1
+        - identifier: stories
+          name: Stories
+          url: /stories
+          weight: 2
+        - identifier: tutorials
+          name: Tutorials
+          url: /tutorials
+          weight: 3
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 6
