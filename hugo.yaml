@@ -1,6 +1,6 @@
 baseURL: "https://ess-aiml.github.io/blogs/"
 languageCode: en-us
-title: AI/ML for ESS
+title: ESS-AI/ML
 theme: ["PaperMod"]
 
 outputs:
@@ -16,11 +16,18 @@ taxonomies:
 params:
     defaultTheme: dark
     homeInfoParams:
-        Title: "Welcome to AI/ML for ESS Blog 🧬"
+        Title: "Welcome to ESS-AI/ML's Blog 🧬"
         Content: Welcome to the blog, where we explore the role of AI and ML in advancing Environmental System Science (ESS). Here, you’ll find updates, insights, and discussions from our ESS community.
     socialIcons:
+        - name: "cv"
+          title: "Contributing your posts"
+          url: "https://github.com/ess-aiml/blogs/blob/main/CONTRIBUTING.md"
+        - name: deezer
+          title: "ESS AI/ML Working Group"
+          url: "https://esscommunity.org/working-groups/ai-ml/"
         - name: email
-          url: "mailto:some@emailadres.com"
+          title: "Contact Us!"
+          url: "mailto:lepv@ornl.gov"
 
     ShowReadingTime: true
     ShowTags: true
