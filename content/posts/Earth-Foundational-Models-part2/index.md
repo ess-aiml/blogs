@@ -1,6 +1,6 @@
 ---
 title: "Earth Foundational Models - An Introduction (Part 2) -- Test"
-date: 2025-10-06
+date: 2026-10-06
 tags: ["Foundational Model"]
 summary: "A beginner’s guide to the powerful models shaping the future of Earth science"
 series: ["PaperMod"]

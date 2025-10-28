@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on ESS-AI/ML</title><link>https://ess-aiml.github.io/blogs/posts/</link><description>Recent content in Posts on ESS-AI/ML</description><generator>Hugo -- 0.151.0</generator><language>en-us</language><lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ess-aiml.github.io/blogs/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Diffusion Models: Theory and Applications in Earth Sciences</title><link>https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/</link><pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate><guid>https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/</guid><description>A beginner’s guide to diffusion models</description><content:encoded><![CDATA[<p>In the past few years, <strong>diffusion models</strong> have become one of the most powerful tools in artificial intelligence (AI). They’re behind many impressive <strong>generative systems</strong> — from creating realistic images, sounds, and videos to helping design new molecules and drugs to modeling complex climate and environmental systems.</p>
+<p>There are already plenty of great articles that dive into the technical details of diffusion models — and we’ll share some of our favorites along the way. In this post, we focus on the core principles and explore how diffusion models are being used in environmental system science, and why those applications are so promising and exciting.</p>
+<p>Let’s get started!</p>
+<h2 id="what-are-generative-models">What are generative models?</h2>
+<blockquote>
+<p><em>Generative models are AI systems that can learn the underlying structure of existing data and use it to create new content similar to the originals.</em></p></blockquote>
+<p>What does this mean in practice? Suppose we have a dataset containing photos of dogs. We can train a generative model on this dataset to capture the rules that govern the complex relationships between pixels in images of dogs. Then we can sample from this model to create novel, realistic images of dogs that did not exist in the original dataset.
+Generative models are also <strong>probabilistic systems</strong> &ndash; that means they are able to sample many different variations of the output, rather than get the same output every time.</p>
+<figure>
+    <img loading="lazy" src="images/generative_modeling.jpg"
+         alt="Generative"/> <figcaption>
+            <p>Figure 1: Generative model learns features of dogs from the training dataset and can generate new, high-quality dog images. Credit: Tanishq Mathew Abraham.</p>
+        </figcaption>
+</figure>
+
+<p>There are different types of generative models, such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and flow-based and diffusion models. They have shown great success in generating high-quality samples, but each has some limitations of its own. We only discuss diffusion models here.</p>
+<figure>
+    <img loading="lazy" src="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/generative-overview.png"
+         alt="Generative"/> <figcaption>
+            <p>Figure 2: Overview of different types of generative models.</p>
+        </figcaption>
+</figure>
+
+<h2 id="what-are-diffusion-models">What are diffusion models?</h2>
+<p>Diffusion models are inspired by non-equilibrium thermodynamics in physics. The core idea behind them is simple: we gradually corrupt (add noise to) clean data until it becomes completely random, then train a deep learning model to reverse this process and recover the original data.</p>
+<blockquote>
+<p><em>Diffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.</em></p></blockquote>
+<p>In other words, diffusion models learn how to &ldquo;undo&rdquo; noise — like taking a blurry satellite image and sharpening it bit by bit until the continents and clouds come back into focus. Each small step improves the image, gradually turning random noise into something realistic.
+This process has two parts:</p>
+<ul>
+<li><strong>Forward diffusion</strong>: adding noise to the data in many small steps.</li>
+<li><strong>Reverse diffusion</strong>: training the model to remove the noise and rebuild the data.</li>
+</ul>
+<figure>
+    <img loading="lazy" src="images/diffusion_processes.webp"
+         alt="Diffusion model"/> <figcaption>
+            <p>Figure 3: Forward and reverse diffusion processes. Source: <a href="https://arxiv.org/abs/2209.00796">Yang et al (2022)</a></p>
+        </figcaption>
+</figure>
+
+<p>In principle, if we start from pure random (e.g., white) noise, we should be able to keep applying the trained model until we obtain a sample that looks as if it were drawn from the training set. That&rsquo;s it &ndash; and yet this simple idea works incredibly well in practice.</p>
+<p>For those who want to explore further:</p>
+<ul>
+<li>This <strong><a href="https://erdem.pl/2023/11/step-by-step-visual-introduction-to-diffusion-models">article</a></strong> provides an interactive, step-by-step introduction that makes diffusion models much easier to grasp.</li>
+<li>This <strong><a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/">post</a></strong> dives into the math behind both the forward and reverse diffusion processes.</li>
+</ul>
+<p>Both of these resources are well worth a read if you’d like to dig into the details.</p>
+<h2 id="how-do-diffusion-models-work">How do diffusion models work?</h2>
+<p>Let&rsquo;s look at the simplified math of diffusion models</p>
+<h3 id="forward-diffusion--adding-noise">Forward Diffusion &ndash; adding noise:</h3>
+<p>Suppose we have a sample $\mathbf{x}_0$ that we want to corrupt gradually so that eventually it is indistinguishable from random noise. Here are the fundamental steps we will do:</p>
+<ul>
+<li>Define a function $q$ that adds a small amount of Gaussian noise with variance $\beta_t$ to sample $\mathbf{x}_{t-1}$ to create sample $\mathbf{x}_{t}$.</li>
+<li>Keep applying this function will generate a sequence of progressively noisier samples $(\mathbf{x}_{0},&hellip;, \mathbf{x}_{T})$</li>
+</ul>
+<p>&hellip;</p>
+<!--### Reverse Diffusion:-->
+<!--The model learns to reverse the noise addition process. By training to predict the noise that was added at each step, it gradually reconstructs the original data from the noise.-->
+<!--### Diffusion models in environmental system science?-->
+]]></content:encoded></item><item><title>Foundation Models for Earth System - An Introduction</title><link>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part1/</link><pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate><guid>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part1/</guid><description>A beginner’s guide to the powerful models shaping the future of Earth science</description><content:encoded><![CDATA[<p>AI is revolutionizing the way we study and understand our planet. One of the most exciting developments in this space for years to come is <em>foundation models for Earth system</em>. In this post, we’ll break down what these models are and why they have so much potential.</p>
+<h3 id="what-is-a-foundation-model">What is a foundation model?</h3>
+<blockquote>
+<p><em>A foundation model is an AI model trained on a massive amount of data (usually by unsupervised learning) and can be adapted to a wide range of tasks.</em></p></blockquote>
+<p>They are a turning point in AI, replacing traditional models that were trained for a single purpose. Once pre-trained, foundation models can be adapted to numerous downstream applications with little to no additional training samples.</p>
+<h3 id="what-are-foundation-models-for-earth-system">What are foundation models for Earth system?</h3>
+<blockquote>
+<p><em>They are foundation models designed for</em></p></blockquote>
+]]></content:encoded></item></channel></rss>

@@ -1,31 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Foundational Model on ESS-AI/ML</title><link>https://ess-aiml.github.io/blogs/tags/foundational-model/</link><description>Recent content in Foundational Model on ESS-AI/ML</description><generator>Hugo -- 0.151.0</generator><language>en-us</language><lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ess-aiml.github.io/blogs/tags/foundational-model/index.xml" rel="self" type="application/rss+xml"/><item><title>Earth Foundational Models - An Introduction (Part 3) -- Test</title><link>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part3/</link><pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate><guid>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part3/</guid><description>A beginner’s guide to the powerful models shaping the future of Earth science</description><content:encoded><![CDATA[<blockquote>
-<p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
-<p>There are 5 key characteristics of Foundation Models:</p>
-<ol>
-<li>Pretrained (using large data and massive compute so that it is ready to be used without any additional training)</li>
-<li>Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)</li>
-<li>Adaptable (through prompting — the input to the model using say text)</li>
-<li>Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)</li>
-<li>Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.</li>
-</ol>
-]]></content:encoded></item><item><title>Earth Foundational Models - An Introduction (Part 2) -- Test</title><link>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part2/</link><pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate><guid>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part2/</guid><description>A beginner’s guide to the powerful models shaping the future of Earth science</description><content:encoded><![CDATA[<blockquote>
-<p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
-<p>There are 5 key characteristics of Foundation Models:</p>
-<ol>
-<li>Pretrained (using large data and massive compute so that it is ready to be used without any additional training)</li>
-<li>Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)</li>
-<li>Adaptable (through prompting — the input to the model using say text)</li>
-<li>Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)</li>
-<li>Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.</li>
-</ol>
-]]></content:encoded></item><item><title>Earth Foundational Models - An Introduction (Part 1) -- Test</title><link>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part1/</link><pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate><guid>https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part1/</guid><description>A beginner’s guide to the powerful models shaping the future of Earth science</description><content:encoded><![CDATA[<blockquote>
-<p>Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.</p></blockquote>
-<p>There are 5 key characteristics of Foundation Models:</p>
-<ol>
-<li>Pretrained (using large data and massive compute so that it is ready to be used without any additional training)</li>
-<li>Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)</li>
-<li>Adaptable (through prompting — the input to the model using say text)</li>
-<li>Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)</li>
-<li>Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.</li>
-</ol>
-]]></content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Foundational Model on ESS-AI/ML</title>
+    <link>http://localhost:1313/blogs/tags/foundational-model/</link>
+    <description>Recent content in Foundational Model on ESS-AI/ML</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogs/tags/foundational-model/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Foundation Models for Earth System - An Introduction</title>
+      <link>http://localhost:1313/blogs/posts/earth-foundational-models-part1/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/posts/earth-foundational-models-part1/</guid>
+      <description>A beginner’s guide to the powerful models shaping the future of Earth science</description>
+      <content:encoded><![CDATA[<p>AI is revolutionizing the way we study and understand our planet. One of the most exciting developments in this space for years to come is <em>foundation models for Earth system</em>. In this post, we’ll break down what these models are and why they have so much potential.</p>
+<h3 id="what-is-a-foundation-model">What is a foundation model?</h3>
+<blockquote>
+<p><em>A foundation model is an AI model trained on a massive amount of data (usually by unsupervised learning) and can be adapted to a wide range of tasks.</em></p></blockquote>
+<p>They are a turning point in AI, replacing traditional models that were trained for a single purpose. Once pre-trained, foundation models can be adapted to numerous downstream applications with little to no additional training samples.</p>
+<h3 id="what-are-foundation-models-for-earth-system">What are foundation models for Earth system?</h3>
+<blockquote>
+<p><em>They are foundation models designed for</em></p></blockquote>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

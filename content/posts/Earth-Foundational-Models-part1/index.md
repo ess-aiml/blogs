@@ -1,19 +1,19 @@
 ---
-title: "Earth Foundational Models - An Introduction (Part 1) -- Test"
-date: 2025-10-01
-tags: ["Foundational Model"]
+title: "Foundation Models for Earth System - An Introduction"
+date: 2026-10-01
+tags: ["Foundational Model", "Earth",]
 summary: "A beginner’s guide to the powerful models shaping the future of Earth science"
 series: ["PaperMod"]
 # weight: 1
 # aliases: ["/papermod-installation"]
 tags: ["Foundational Model"]
 author: ["AI/ML WG"]
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-disableHLJS: true # to disable highlightjs
+disableHLJS: false # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
@@ -38,13 +38,13 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+AI is revolutionizing the way we study and understand our planet. One of the most exciting developments in this space for years to come is *foundation models for Earth system*. In this post, we’ll break down what these models are and why they have so much potential.
 
-> Foundation models are powerful artificial intelligence (AI) models that are trained on a massive amount of data and can be adapted to a wide range of tasks.
+### What is a foundation model?
+> *A foundation model is an AI model trained on a massive amount of data (usually by unsupervised learning) and can be adapted to a wide range of tasks.*
 
-There are 5 key characteristics of Foundation Models:
+They are a turning point in AI, replacing traditional models that were trained for a single purpose. Once pre-trained, foundation models can be adapted to numerous downstream applications with little to no additional training samples.
 
-1. Pretrained (using large data and massive compute so that it is ready to be used without any additional training)
-2. Generalized — one model for many tasks (unlike traditional AI which was specific for a task such as image recognition)
-3. Adaptable (through prompting — the input to the model using say text)
-4. Large (in terms of model size and data size e.g. GPT-3 has 175B parameters and was trained on about 500,000 million words, equivalent of over 10 lifetimes of humans reading nonstop!)
-5. Self-supervised (see footnote 1) — no specific labels are provided and the model has to learn from the patterns in the data which is provided — see the cake illustration below.
+
+### What are foundation models for Earth system?
+> *They are foundation models designed for*

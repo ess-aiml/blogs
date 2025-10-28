@@ -1,7 +1,7 @@
 baseURL: "https://ess-aiml.github.io/blogs/"
 languageCode: en-us
 title: ESS-AI/ML
-theme: ["PaperMod"]
+theme: "PaperMod"
 
 outputs:
     home:
@@ -14,9 +14,10 @@ taxonomies:
     tag: tags
 
 params:
+    math: false
     defaultTheme: dark
     homeInfoParams:
-        Title: "Welcome to ESS-AI/ML's Blog 🧬"
+        Title: "Welcome to ESS-AI/ML's Blog"
         Content: Welcome to the blog, where we explore the role of AI and ML in advancing Environmental System Science (ESS). Here, you’ll find updates, insights, and discussions from our ESS community.
     socialIcons:
         - name: "cv"
@@ -38,7 +39,13 @@ params:
     ShowAllPagesInArchive: true #
     ShowAllPagesInHome: true
     ShowAllPagesInSearch: true
+    ShowWordCount: false
     buildFuture: true
+    customCSS:
+        - "css/custom.css"
+    assets:
+        css:
+            - "css/extended/figure-center.css"
 
 menu:
     main:
@@ -70,3 +77,8 @@ menu:
 caches:
     images:
         dir: :cacheDir/images
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true

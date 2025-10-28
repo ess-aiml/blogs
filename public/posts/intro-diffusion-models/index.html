@@ -1,6 +1,426 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>What are Diffusion Models? -- Test | ESS-AI/ML</title><meta name=keywords content="Diffusion Model"><meta name=description content="A beginner’s guide to diffusion models"><meta name=author content="Me"><link rel=canonical href=https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/><link crossorigin=anonymous href=/blogs/assets/css/stylesheet.a090830a421002426baafbd314e38f149d77b4c48a12ee9312700d770b27fb26.css integrity="sha256-oJCDCkIQAkJrqvvTFOOPFJ13tMSKEu6TEnANdwsn+yY=" rel="preload stylesheet" as=style><link rel=icon href=https://ess-aiml.github.io/blogs/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ess-aiml.github.io/blogs/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ess-aiml.github.io/blogs/favicon-32x32.png><link rel=apple-touch-icon href=https://ess-aiml.github.io/blogs/apple-touch-icon.png><link rel=mask-icon href=https://ess-aiml.github.io/blogs/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/"><meta property="og:site_name" content="ESS-AI/ML"><meta property="og:title" content="What are Diffusion Models? -- Test"><meta property="og:description" content="A beginner’s guide to diffusion models"><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-10-02T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-02T00:00:00+00:00"><meta property="article:tag" content="Diffusion Model"><meta property="og:image" content="https://ess-aiml.github.io/blogs/%3Cimage%20path/url%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://ess-aiml.github.io/blogs/%3Cimage%20path/url%3E"><meta name=twitter:title content="What are Diffusion Models? -- Test"><meta name=twitter:description content="A beginner’s guide to diffusion models"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ess-aiml.github.io/blogs/posts/"},{"@type":"ListItem","position":2,"name":"What are Diffusion Models? -- Test","item":"https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"What are Diffusion Models? -- Test","name":"What are Diffusion Models? -- Test","description":"A beginner’s guide to diffusion models","keywords":["Diffusion Model"],"articleBody":"Diffusion models are a type of generative AI that create data by learning to reverse a process of gradually adding noise, turning random noise into realistic images, audio, or text. They are powerful because they generate high-quality results and are more stable to train than GANs.\n","wordCount":"46","inLanguage":"en","image":"https://ess-aiml.github.io/blogs/%3Cimage%20path/url%3E","datePublished":"2025-10-02T00:00:00Z","dateModified":"2025-10-02T00:00:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/"},"publisher":{"@type":"Organization","name":"ESS-AI/ML","logo":{"@type":"ImageObject","url":"https://ess-aiml.github.io/blogs/favicon.ico"}}}</script></head><body class=dark id=top><script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ess-aiml.github.io/blogs/ accesskey=h title="ESS-AI/ML (Alt + H)">ESS-AI/ML</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ess-aiml.github.io/blogs/posts title=Posts><span>Posts</span></a></li><li><a href=https://ess-aiml.github.io/blogs/stories title=Stories><span>Stories</span></a></li><li><a href=https://ess-aiml.github.io/blogs/tutorials title=Tutorials><span>Tutorials</span></a></li><li><a href=https://ess-aiml.github.io/blogs/archives title=Archive><span>Archive</span></a></li><li><a href=https://ess-aiml.github.io/blogs/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://ess-aiml.github.io/blogs/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://ess-aiml.github.io/blogs/>Home</a>&nbsp;»&nbsp;<a href=https://ess-aiml.github.io/blogs/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">What are Diffusion Models? -- Test</h1><div class=post-meta><span title='2025-10-02 00:00:00 +0000 UTC'>October 2, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>46 words</span>&nbsp;·&nbsp;<span>Me</span>&nbsp;|&nbsp;<span>
-<a href=https://github.com/%3cpath_to_repo%3e/content/posts/Intro-Diffusion-Models/index.md rel="noopener noreferrer edit" target=_blank>Suggest Changes</a></span></div></header><div class=post-content><p>Diffusion models are a type of generative AI that create data by learning to reverse a process of gradually adding noise, turning random noise into realistic images, audio, or text. They are powerful because they generate high-quality results and are more stable to train than GANs.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ess-aiml.github.io/blogs/tags/diffusion-model/>Diffusion Model</a></li></ul><nav class=paginav><a class=prev href=https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part2/><span class=title>« Prev</span><br><span>Earth Foundational Models - An Introduction (Part 2) -- Test</span>
-</a><a class=next href=https://ess-aiml.github.io/blogs/posts/earth-foundational-models-part1/><span class=title>Next »</span><br><span>Earth Foundational Models - An Introduction (Part 1) -- Test</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://ess-aiml.github.io/blogs/>ESS-AI/ML</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Diffusion Models: Theory and Applications in Earth Sciences | ESS-AI/ML</title>
+<meta name="keywords" content="Diffusion Model">
+<meta name="description" content="A beginner’s guide to diffusion models">
+<meta name="author" content="ESS-AIML">
+<link rel="canonical" href="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/">
+<link crossorigin="anonymous" href="/blogs/assets/css/stylesheet.e4604635c299f5b76ed8970ceeb86365464445b38b278c180365e0737c950806.css" integrity="sha256-5GBGNcKZ9bdu2JcM7rhjZUZERbOLJ4wYA2Xgc3yVCAY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ess-aiml.github.io/blogs/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ess-aiml.github.io/blogs/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ess-aiml.github.io/blogs/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ess-aiml.github.io/blogs/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ess-aiml.github.io/blogs/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [
+                ["$", "$"],
+                ["\\(", "\\)"],
+            ],
+            displayMath: [
+                ["$$", "$$"],
+                ["\\[", "\\]"],
+            ],
+            processEscapes: true,
+            processEnvironments: true,
+            tags: "ams",
+        },
+        options: {
+            skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+            ignoreHtmlClass: "tex2jax_ignore",
+            processHtmlClass: "tex2jax_process",
+        },
+        svg: { fontCache: "global" },
+    };
+</script>
+<script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+
+<meta property="og:url" content="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/">
+  <meta property="og:site_name" content="ESS-AI/ML">
+  <meta property="og:title" content="Diffusion Models: Theory and Applications in Earth Sciences">
+  <meta property="og:description" content="A beginner’s guide to diffusion models">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-28T00:00:00+00:00">
+    <meta property="article:tag" content="Diffusion Model">
+    <meta property="og:image" content="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion.jpg">
+<meta name="twitter:title" content="Diffusion Models: Theory and Applications in Earth Sciences">
+<meta name="twitter:description" content="A beginner’s guide to diffusion models">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ess-aiml.github.io/blogs/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Diffusion Models: Theory and Applications in Earth Sciences",
+      "item": "https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Diffusion Models: Theory and Applications in Earth Sciences",
+  "name": "Diffusion Models: Theory and Applications in Earth Sciences",
+  "description": "A beginner’s guide to diffusion models",
+  "keywords": [
+    "Diffusion Model"
+  ],
+  "articleBody": "In the past few years, diffusion models have become one of the most powerful tools in artificial intelligence (AI). They’re behind many impressive generative systems — from creating realistic images, sounds, and videos to helping design new molecules and drugs to modeling complex climate and environmental systems.\nThere are already plenty of great articles that dive into the technical details of diffusion models — and we’ll share some of our favorites along the way. In this post, we focus on the core principles and explore how diffusion models are being used in environmental system science, and why those applications are so promising and exciting.\nLet’s get started!\nWhat are generative models? Generative models are AI systems that can learn the underlying structure of existing data and use it to create new content similar to the originals.\nWhat does this mean in practice? Suppose we have a dataset containing photos of dogs. We can train a generative model on this dataset to capture the rules that govern the complex relationships between pixels in images of dogs. Then we can sample from this model to create novel, realistic images of dogs that did not exist in the original dataset. Generative models are also probabilistic systems – that means they are able to sample many different variations of the output, rather than get the same output every time.\nFigure 1: Generative model learns features of dogs from the training dataset and can generate new, high-quality dog images. Credit: Tanishq Mathew Abraham.\nThere are different types of generative models, such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and flow-based and diffusion models. They have shown great success in generating high-quality samples, but each has some limitations of its own. We only discuss diffusion models here.\nFigure 2: Overview of different types of generative models.\nWhat are diffusion models? Diffusion models are inspired by non-equilibrium thermodynamics in physics. The core idea behind them is simple: we gradually corrupt (add noise to) clean data until it becomes completely random, then train a deep learning model to reverse this process and recover the original data.\nDiffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.\nIn other words, diffusion models learn how to “undo” noise — like taking a blurry satellite image and sharpening it bit by bit until the continents and clouds come back into focus. Each small step improves the image, gradually turning random noise into something realistic. This process has two parts:\nForward diffusion: adding noise to the data in many small steps. Reverse diffusion: training the model to remove the noise and rebuild the data. Figure 3: Forward and reverse diffusion processes.\nIn principle, if we start from pure random noise, we should be able to keep applying the trained model until we obtain a sample that looks as if it were drawn from the training set. That’s it – and yet this simple idea works incredibly well in practice.\nFor a more visual understanding, check out this article – it provides an interactive, step-by-step introduction that makes diffusion models much easier to grasp.\nHow do diffusion models work? Forward diffusion process: Suppose we have a sample from a real data distribution $\\mathbf{x}_0 \\sim q(\\mathbf{x})$. In the forward diffusion, we gradually corrupt the sample by adding small amounts of Gaussian noise in $T$ steps, producing a sequence of increasingly noisy samples $\\mathbf{x}_1, \\dots, \\mathbf{x}_T$. The amount of noise added at each step $t$ is controlled by a variance schedule $\\{\\beta_t \\in (0, 1)\\}_{t=1}^T$. $$ \\begin{aligned} q(\\mathbf{x}_t \\vert \\mathbf{x}_{t-1}) \u0026= \\mathcal{N}(\\mathbf{x}_t; \\sqrt{1 - \\beta_t} \\mathbf{x}_{t-1}, \\beta_t\\mathbf{I}) \\\\ q(\\mathbf{x}_{1:T} \\vert \\mathbf{x}_0) \u0026= \\prod^T_{t=1} q(\\mathbf{x}_t \\vert \\mathbf{x}_{t-1}) \\end{aligned} $$\nAs $t$ increases, the sample $\\mathbf{x}_t$ becomes progressively noisier. Eventually when $T \\rightarrow \\infty$, $\\mathbf{x}_T$ is indistinguishable from random noise.\nMathematically, we can write each step as follows: $$ \\mathbf{x}_t = \\sqrt{1-\\beta_t}\\mathbf{x}_{t-1} + \\sqrt{\\beta_t}\\boldsymbol{\\epsilon}_{t-1} \\quad \\quad \\text{where }\\boldsymbol{\\epsilon}_{t-1} \\sim \\mathcal{N}(\\mathbf{0}, \\mathbf{I}) $$\nHere, $\\mathcal{N}(\\cdot,\\cdot)$ denotes a normal distribution. Since the sum of two Gaussian variables with variances $\\sigma^2_1$ and $\\sigma^2_2$ is also Gaussian with variance $\\sigma^2_1+\\sigma^2_2.$ Given that $\\boldsymbol{\\epsilon}_{t-1} \\sim \\mathcal{N}(\\mathbf{0}, \\mathbf{I})$, if $\\mathbf{x}_{t-1}$ has zero mean and unit variance, then so does $\\mathbf{x}_{t}$, as $\\sqrt{1-\\beta_t}^2 + \\sqrt{\\beta_t}^2=1$. This scaling ensures that the variance remains stable throughout the diffusion process. This way, if we normalize our original sample $\\mathbf{x}_{0}$ to have zero mean and unit variance, then the sequence $\\mathbf{x}_1, \\dots, \\mathbf{x}_T$ will also maintain these properties and $\\mathbf{x}_T$ will approximate a standard Gaussian distribution for sufficiently large $T$.\nAnother nice property of the above process is that we can jump straight from the original $\\mathbf{x}_0$ to any noised version of the forward diffusion process $\\mathbf{x}_t$ using a clever reparameterization trick.\nLet $\\alpha_t = 1 - \\beta_t$ and $\\bar{\\alpha}_t = \\prod_{i=1}^t \\alpha_i$, then we can write the following: $$ \\begin{aligned} \\mathbf{x}_t \u0026= \\sqrt{\\alpha_t}\\mathbf{x}_{t-1} + \\sqrt{1 - \\alpha_t}\\boldsymbol{\\epsilon}_{t-1} \\\\ \u0026= {\\color{blue}\\sqrt{\\alpha_t}( \\sqrt{\\alpha_{t-1}}\\mathbf{x}_{t-2} + \\sqrt{1 - \\alpha_{t-1}}\\boldsymbol{\\epsilon}_{t-2} )} + \\sqrt{1 - \\alpha_{t}}\\boldsymbol{\\epsilon}_{t-1} \\\\ \u0026= {\\color{blue}\\sqrt{\\alpha_t \\alpha_{t-1}} \\mathbf{x}_{t-2} + \\sqrt{\\alpha_t (1-\\alpha_{t-1})}\\boldsymbol{\\epsilon}_{t-2}} + \\sqrt{1 - \\alpha_{t}}\\boldsymbol{\\epsilon}_{t-1} \\\\ \u0026= \\sqrt{\\alpha_t \\alpha_{t-1}} \\mathbf{x}_{t-2} + {\\color{blue}\\sqrt{1 - \\alpha_t \\alpha_{t-1}} \\bar{\\boldsymbol{\\epsilon}}_{t-2} } \\\\ \u0026= \\dots \\\\ \u0026= \\sqrt{\\bar{\\alpha}_t}\\mathbf{x}_0 + \\sqrt{1 - \\bar{\\alpha}_t}\\boldsymbol{\\epsilon} \\end{aligned} $$\nSince $\\boldsymbol{\\epsilon}_{t-2}, \\boldsymbol{\\epsilon}_{t-1} \\sim \\mathcal{N}(\\mathbf{0}, \\mathbf{I})$, their weighted sum is itself a Gaussian with standard deviation $\\sqrt{\\alpha_t (1-\\alpha_{t-1})+(1-\\alpha_t)} = \\sqrt{1-\\alpha_t\\alpha_{t-1}}$ and $\\bar{\\boldsymbol{\\epsilon}}_{t-2} \\sim \\mathcal{N}(\\mathbf{0})$.\nThe forward diffusion process $q$ can therefore be written as follows: $$ q(\\mathbf{x}_t \\vert \\mathbf{x}_0) = \\mathcal{N}(\\mathbf{x}_t; \\sqrt{\\bar{\\alpha}_t} \\mathbf{x}_0, (1 - \\bar{\\alpha}_t)\\mathbf{I}) $$\nReverse Diffusion: If we can undo the above process and sample from $q(\\mathbf{x}_{t-1} \\vert \\mathbf{x}_t)$, we can reconstruct a true data sample starting from pure Gaussian noise, $\\mathbf{x}_T \\sim \\mathcal{N}(\\mathbf{0}, \\mathbf{I})$. Unfortunately, the exact posterior $q(\\mathbf{x}_{t-1} \\vert \\mathbf{x}_t)$ is intractable, as computing it would require integrating over the entire data distribution.\nInstead, we approximate these conditional probabilities with a parameterized model $p_\\theta$ (e.g., a neural network). Because $q(\\mathbf{x}_{t-1} \\vert \\mathbf{x}_t)$ is also Gaussian for sufficiently small $\\beta_t$​, we can choose $p_\\theta$ to be Gaussian. Therefore, we define the reverse process as:\n$$ p_\\theta(\\mathbf{x}_{t-1} \\vert \\mathbf{x}_t) = \\mathcal{N}(\\mathbf{x}_{t-1}; \\boldsymbol{\\mu}_\\theta(\\mathbf{x}_t, t), \\boldsymbol{\\Sigma}_\\theta(\\mathbf{x}_t, t)) $$\nHere, $\\boldsymbol{\\mu}_\\theta$ and $\\boldsymbol{\\Sigma}_\\theta$ are outputs of a neural network that predict the mean and variance of the denoised sample at each timestep\nFigure 4: Reverse diffusion process.\nIf we apply the reverse formula for all timesteps $p_\\theta(\\mathbf{x}_{0:T})$, we can go from random noise $\\mathbf{x}_T$ to the data distribution: $$ p_\\theta(\\mathbf{x}_{0:T}) = p(\\mathbf{x}_T) \\prod^T_{t=1} p_\\theta(\\mathbf{x}_{t-1} \\vert \\mathbf{x}_t) $$\nFor a deeper dive into the math behind both the forward and reverse diffusion processes, check out these great resources: Lil’Log post, The AI Summer’s guide.\nBut how do we train diffusion models? To train the diffusion model, we optimize the parameters $\\theta$ of the reverse process $p_\\theta(\\mathbf{x}_{t-1} \\mid \\mathbf{x}_t)$ so that it can accurately denoise samples at each step. Rather than directly learning to reconstruct $ \\mathbf{x}_0$, it is more efficient to train the model to predict the noise $ \\boldsymbol{\\epsilon}_t$ that was added during the forward process.\nThe training objective is derived from the variational lower bound (VLB) on the log-likelihood (see the two posts above if you want to know the details). By minimizing this loss, the model learns how to progressively remove noise from any noisy input—allowing it to generate realistic samples starting from pure random noise.\nDiffusion models in environmental system science Diffusion models are opening new frontiers in environmental and Earth system science. Their ability to generate realistic, high-resolution data makes them powerful tools for simulating and understanding complex natural processes.\nFor example:\nClimate and Weather Modeling: Diffusion models can generate fine-grained climate patterns or downscale coarse-resolution simulations, improving forecasts and scenario modeling.\nRemote Sensing and Earth Observation: They can reconstruct missing satellite data, denoise cloudy or corrupted imagery, and synthesize realistic environmental maps.\nGeoscientific Data Generation: In areas like hydrology, seismology, or oceanography, diffusion models can generate synthetic yet physically consistent data, supporting model training and uncertainty quantification.\n",
+  "wordCount" : "1327",
+  "inLanguage": "en",
+  "image":"https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion.jpg","datePublished": "2025-10-28T00:00:00Z",
+  "dateModified": "2025-10-28T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "ESS-AIML"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ESS-AI/ML",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ess-aiml.github.io/blogs/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ess-aiml.github.io/blogs/" accesskey="h" title="ESS-AI/ML (Alt + H)">ESS-AI/ML</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/stories" title="Stories">
+                    <span>Stories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/tutorials" title="Tutorials">
+                    <span>Tutorials</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ess-aiml.github.io/blogs/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ess-aiml.github.io/blogs/">Home</a>&nbsp;»&nbsp;<a href="https://ess-aiml.github.io/blogs/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Diffusion Models: Theory and Applications in Earth Sciences
+    </h1>
+    <div class="post-meta"><span title='2025-10-28 00:00:00 +0000 UTC'>October 28, 2025</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>1327 words</span>&nbsp;·&nbsp;<span>ESS-AIML</span>&nbsp;|&nbsp;<span>
+    <a href="https://github.com/ess-aiml/blogs/blob/main/content/posts/Intro-Diffusion-Models/index.md" rel="noopener noreferrer edit" target="_blank">Suggest Changes</a>
+</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager"
+                srcset='https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion_hu_352f95df6bded65e.jpg 360w,https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion_hu_66a2801a960f51d6.jpg 480w,https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion_hu_7a0ac690c1912db.jpg 720w,https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion_hu_dac70d87af8e7db7.jpg 1080w,https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion_hu_4069a8abb3b86a25.jpg 1500w,https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion.jpg 1536w'
+                src="https://ess-aiml.github.io/blogs/posts/intro-diffusion-models/images/Earth_diffusion.jpg"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1536" height="1024"
+                alt="">
+        <figcaption>Photo created by Text-to-Image AI</figcaption>
+</figure>
+  <div class="post-content"><p>In the past few years, <strong>diffusion models</strong> have become one of the most powerful tools in artificial intelligence (AI). They’re behind many impressive <strong>generative systems</strong> — from creating realistic images, sounds, and videos to helping design new molecules and drugs to modeling complex climate and environmental systems.</p>
+<p>There are already plenty of great articles that dive into the technical details of diffusion models — and we’ll share some of our favorites along the way. In this post, we focus on the core principles and explore how diffusion models are being used in environmental system science, and why those applications are so promising and exciting.</p>
+<p>Let’s get started!</p>
+<h2 id="what-are-generative-models">What are generative models?<a hidden class="anchor" aria-hidden="true" href="#what-are-generative-models">#</a></h2>
+<blockquote>
+<p><em>Generative models are AI systems that can learn the underlying structure of existing data and use it to create new content similar to the originals.</em></p></blockquote>
+<p>What does this mean in practice? Suppose we have a dataset containing photos of dogs. We can train a generative model on this dataset to capture the rules that govern the complex relationships between pixels in images of dogs. Then we can sample from this model to create novel, realistic images of dogs that did not exist in the original dataset.
+Generative models are also <strong>probabilistic systems</strong> &ndash; that means they are able to sample many different variations of the output, rather than get the same output every time.</p>
+<figure>
+    <img loading="lazy" src="images/generative_modeling.jpg"
+         alt="Generative"/> <figcaption>
+            <p>Figure 1: Generative model learns features of dogs from the training dataset and can generate new, high-quality dog images. Credit: Tanishq Mathew Abraham.</p>
+        </figcaption>
+</figure>
+
+<p>There are different types of generative models, such as Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and flow-based and diffusion models. They have shown great success in generating high-quality samples, but each has some limitations of its own. We only discuss diffusion models here.</p>
+<figure>
+    <img loading="lazy" src="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/generative-overview.png"
+         alt="Generative"/> <figcaption>
+            <p>Figure 2: Overview of different types of generative models.</p>
+        </figcaption>
+</figure>
+
+<h2 id="what-are-diffusion-models">What are diffusion models?<a hidden class="anchor" aria-hidden="true" href="#what-are-diffusion-models">#</a></h2>
+<p>Diffusion models are inspired by non-equilibrium thermodynamics in physics. The core idea behind them is simple: we gradually corrupt (add noise to) clean data until it becomes completely random, then train a deep learning model to reverse this process and recover the original data.</p>
+<blockquote>
+<p><em>Diffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.</em></p></blockquote>
+<p>In other words, diffusion models learn how to &ldquo;undo&rdquo; noise — like taking a blurry satellite image and sharpening it bit by bit until the continents and clouds come back into focus. Each small step improves the image, gradually turning random noise into something realistic.
+This process has two parts:</p>
+<ul>
+<li><strong>Forward diffusion</strong>: adding noise to the data in many small steps.</li>
+<li><strong>Reverse diffusion</strong>: training the model to remove the noise and rebuild the data.</li>
+</ul>
+<figure>
+    <img loading="lazy" src="images/diffusion_processes.jpg"
+         alt="Diffusion model"/> <figcaption>
+            <p>Figure 3: Forward and reverse diffusion processes.</p>
+        </figcaption>
+</figure>
+
+<p>In principle, if we start from pure random noise, we should be able to keep applying the trained model until we obtain a sample that looks as if it were drawn from the training set. That&rsquo;s it &ndash; and yet this simple idea works incredibly well in practice.</p>
+<p><em>For a more visual understanding, check out <strong><a href="https://erdem.pl/2023/11/step-by-step-visual-introduction-to-diffusion-models">this article</a></strong> &ndash; it provides an interactive, step-by-step introduction that makes diffusion models much easier to grasp.</em></p>
+<h2 id="how-do-diffusion-models-work">How do diffusion models work?<a hidden class="anchor" aria-hidden="true" href="#how-do-diffusion-models-work">#</a></h2>
+<h3 id="forward-diffusion-process">Forward diffusion process:<a hidden class="anchor" aria-hidden="true" href="#forward-diffusion-process">#</a></h3>
+<p>Suppose we have a sample from a real data distribution $\mathbf{x}_0 \sim q(\mathbf{x})$. In the forward diffusion, we gradually corrupt the sample by adding small amounts of Gaussian noise in $T$ steps, producing a sequence of increasingly noisy samples $\mathbf{x}_1, \dots, \mathbf{x}_T$.
+The amount of noise added at each step $t$ is controlled by a variance schedule $\{\beta_t \in (0, 1)\}_{t=1}^T$.
+$$
+\begin{aligned}
+q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) &amp;= \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \\
+q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) &amp;= \prod^T_{t=1} q(\mathbf{x}_t \vert \mathbf{x}_{t-1})
+\end{aligned}
+$$</p>
+<p>As $t$ increases, the sample $\mathbf{x}_t$ becomes progressively noisier.
+Eventually when $T \rightarrow \infty$, $\mathbf{x}_T$ is indistinguishable from random noise.</p>
+<p>Mathematically, we can write each step as follows:
+$$
+\mathbf{x}_t = \sqrt{1-\beta_t}\mathbf{x}_{t-1} + \sqrt{\beta_t}\boldsymbol{\epsilon}_{t-1}  \quad \quad \text{where }\boldsymbol{\epsilon}_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
+$$</p>
+<p>Here, $\mathcal{N}(\cdot,\cdot)$ denotes a normal distribution.
+Since the sum of two Gaussian variables with variances $\sigma^2_1$ and $\sigma^2_2$ is also Gaussian with variance $\sigma^2_1+\sigma^2_2.$ Given that $\boldsymbol{\epsilon}_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$, if $\mathbf{x}_{t-1}$ has zero mean and unit variance, then so does $\mathbf{x}_{t}$, as $\sqrt{1-\beta_t}^2 + \sqrt{\beta_t}^2=1$.
+This scaling ensures that the variance remains stable throughout the diffusion process.
+This way, if we normalize our original sample $\mathbf{x}_{0}$ to have zero mean and unit variance, then the sequence $\mathbf{x}_1, \dots, \mathbf{x}_T$ will also maintain these properties and $\mathbf{x}_T$ will approximate a standard Gaussian distribution for sufficiently large $T$.</p>
+<p>Another nice property of the above process is that we can jump straight from the original $\mathbf{x}_0$ to any noised version of the forward diffusion process $\mathbf{x}_t$ using a clever reparameterization trick.</p>
+<p>Let $\alpha_t = 1 - \beta_t$ and $\bar{\alpha}_t = \prod_{i=1}^t \alpha_i$, then we can write the following:
+$$
+\begin{aligned}
+\mathbf{x}_t
+&amp;= \sqrt{\alpha_t}\mathbf{x}_{t-1} + \sqrt{1 - \alpha_t}\boldsymbol{\epsilon}_{t-1} \\
+&amp;= {\color{blue}\sqrt{\alpha_t}( \sqrt{\alpha_{t-1}}\mathbf{x}_{t-2} + \sqrt{1 - \alpha_{t-1}}\boldsymbol{\epsilon}_{t-2} )} + \sqrt{1 - \alpha_{t}}\boldsymbol{\epsilon}_{t-1} \\
+&amp;= {\color{blue}\sqrt{\alpha_t \alpha_{t-1}} \mathbf{x}_{t-2} + \sqrt{\alpha_t (1-\alpha_{t-1})}\boldsymbol{\epsilon}_{t-2}} + \sqrt{1 - \alpha_{t}}\boldsymbol{\epsilon}_{t-1} \\
+&amp;= \sqrt{\alpha_t \alpha_{t-1}} \mathbf{x}_{t-2} + {\color{blue}\sqrt{1 - \alpha_t \alpha_{t-1}} \bar{\boldsymbol{\epsilon}}_{t-2} } \\
+&amp;= \dots \\
+&amp;= \sqrt{\bar{\alpha}_t}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\boldsymbol{\epsilon}
+\end{aligned}
+$$</p>
+<p>Since $\boldsymbol{\epsilon}_{t-2}, \boldsymbol{\epsilon}_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$, their weighted sum is itself a Gaussian with standard deviation $\sqrt{\alpha_t (1-\alpha_{t-1})+(1-\alpha_t)} = \sqrt{1-\alpha_t\alpha_{t-1}}$ and $\bar{\boldsymbol{\epsilon}}_{t-2} \sim \mathcal{N}(\mathbf{0})$.</p>
+<p>The forward diffusion process $q$ can therefore be written as follows:
+$$
+q(\mathbf{x}_t \vert \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I})
+$$</p>
+<h3 id="reverse-diffusion">Reverse Diffusion:<a hidden class="anchor" aria-hidden="true" href="#reverse-diffusion">#</a></h3>
+<p>If we can <em>undo</em> the above process and sample from $q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)$, we can reconstruct a true data sample starting from pure Gaussian noise, $\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$.
+Unfortunately, the exact posterior $q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)$ is <strong>intractable</strong>, as computing it would require integrating over the entire data distribution.</p>
+<p>Instead, we approximate these conditional probabilities with a parameterized model $p_\theta$ (e.g., a neural network). Because $q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)$ is also Gaussian for sufficiently small $\beta_t$​, we can choose $p_\theta$ to be Gaussian. Therefore, we define the reverse process as:</p>
+<p>$$
+p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))
+$$</p>
+<p>Here, $\boldsymbol{\mu}_\theta$ and $\boldsymbol{\Sigma}_\theta$ are outputs of a neural network that predict the mean and variance of the denoised sample at each timestep</p>
+<figure>
+    <img loading="lazy" src="images/reverse_process.jpg"
+         alt="Diffusion model"/> <figcaption>
+            <p>Figure 4: Reverse diffusion process.</p>
+        </figcaption>
+</figure>
+
+<p>If we apply the reverse formula for all timesteps $p_\theta(\mathbf{x}_{0:T})$, we can go from random noise $\mathbf{x}_T$ to the data distribution:
+$$
+p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t)
+$$</p>
+<blockquote>
+<p><em>For a deeper dive into the math behind both the forward and reverse diffusion processes, check out these great resources: <a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/"><strong>Lil&rsquo;Log post</strong></a>, <a href="https://theaisummer.com/diffusion-models/"><strong>The AI Summer’s guide</strong></a>.</em></p></blockquote>
+<!--By additionally conditioning the model on timestep $t$, it will learn to predict the Gaussian parameters (meaning the mean $\boldsymbol{\mu}\_\theta(\mathbf{x}\_t, t)$ and the covariance matrix $\boldsymbol{\Sigma}\_\theta(\mathbf{x}\_t, t)$) for each timestep.-->
+<h4 id="but-how-do-we-train-diffusion-models">But how do we train diffusion models?<a hidden class="anchor" aria-hidden="true" href="#but-how-do-we-train-diffusion-models">#</a></h4>
+<p>To train the diffusion model, we optimize the parameters $\theta$ of the reverse process $p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t)$ so that it can accurately <strong>denoise</strong> samples at each step.
+Rather than directly learning to reconstruct $ \mathbf{x}_0$, it is more efficient to train the model to predict the <strong>noise</strong> $ \boldsymbol{\epsilon}_t$ that was added during the forward process.</p>
+<p>The training objective is derived from the variational lower bound (VLB) on the log-likelihood (see the two posts above if you want to know the details). By minimizing this loss, the model learns how to progressively remove noise from any noisy input—allowing it to generate realistic samples starting from pure random noise.</p>
+<h3 id="diffusion-models-in-environmental-system-science">Diffusion models in environmental system science<a hidden class="anchor" aria-hidden="true" href="#diffusion-models-in-environmental-system-science">#</a></h3>
+<p>Diffusion models are opening new frontiers in environmental and Earth system science. Their ability to generate realistic, high-resolution data makes them powerful tools for simulating and understanding complex natural processes.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p>Climate and Weather Modeling: Diffusion models can generate fine-grained climate patterns or downscale coarse-resolution simulations, improving forecasts and scenario modeling.</p>
+</li>
+<li>
+<p>Remote Sensing and Earth Observation: They can reconstruct missing satellite data, denoise cloudy or corrupted imagery, and synthesize realistic environmental maps.</p>
+</li>
+<li>
+<p>Geoscientific Data Generation: In areas like hydrology, seismology, or oceanography, diffusion models can generate synthetic yet physically consistent data, supporting model training and uncertainty quantification.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ess-aiml.github.io/blogs/tags/diffusion-model/">Diffusion Model</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://ess-aiml.github.io/blogs/">ESS-AI/ML</a></span>
+        
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
