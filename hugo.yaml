@@ -14,11 +14,11 @@ taxonomies:
     tag: tags
 
 params:
-    math: false
-    defaultTheme: dark
+    # math: false
+    defaultTheme: auto
     homeInfoParams:
         Title: "Welcome to ESS-AI/ML's Blog"
-        Content: Welcome to the blog, where we explore the role of AI and ML in advancing Environmental System Science (ESS). Here, you’ll find updates, insights, and discussions from our ESS community.
+        Content: Welcome to the blog, where we explore the role of AI & ML in advancing Environmental System Science (ESS). Here, you’ll find updates, insights, and discussions from our ESS community.
     socialIcons:
         - name: "cv"
           title: "Contributing your posts"
@@ -36,16 +36,18 @@ params:
     ShowBreadCrumbs: true
     ShowToc: true
     ShowFullTextinRSS: true
-    ShowAllPagesInArchive: true #
+    ShowAllPagesInArchive: true
     ShowAllPagesInHome: true
     ShowAllPagesInSearch: true
     ShowWordCount: false
     buildFuture: true
+    EnableInstantClick: false
     customCSS:
         - "css/custom.css"
     assets:
         css:
             - "css/extended/figure-center.css"
+    comments: true
 
 menu:
     main:
@@ -77,8 +79,3 @@ menu:
 caches:
     images:
         dir: :cacheDir/images
-
-markup:
-    goldmark:
-        renderer:
-            unsafe: true
