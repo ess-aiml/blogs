@@ -2,7 +2,7 @@
 title: "Diffusion Models: Theory and Applications in Earth Sciences"
 summary: "A beginner’s guide to diffusion models"
 date: 2025-10-28
-tags: ["Diffusion Model"]
+tags: ["Diffusion Model", "Generative", "Earth system"]
 author: "ESS-AIML"
 series: ["AI-ML"]
 showToc: false
@@ -14,7 +14,7 @@ disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
@@ -126,7 +126,7 @@ $$
 \end{aligned}
 $$
 
-Since $\boldsymbol{\epsilon}\_{t-2}, \boldsymbol{\epsilon}\_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$, their weighted sum is itself a Gaussian with standard deviation $\sqrt{\alpha_t (1-\alpha_{t-1})+(1-\alpha_t)} = \sqrt{1-\alpha_t\alpha_{t-1}}$ and $\bar{\boldsymbol{\epsilon}}\_{t-2} \sim \mathcal{N}(\mathbf{0})$.
+Since $\boldsymbol{\epsilon}\_{t-2}, \boldsymbol{\epsilon}\_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$, their weighted sum is itself a Gaussian with standard deviation $\sqrt{\alpha_t (1-\alpha_{t-1})+(1-\alpha_t)} = \sqrt{1-\alpha_t\alpha_{t-1}}$ and $\bar{\boldsymbol{\epsilon}}\_{t-2} \sim \mathcal{N}(\mathbf{0},\mathbf{I})$.
 
 The forward diffusion process $q$ can therefore be written as follows:
 $$
@@ -178,23 +178,23 @@ In this post, we skip the complicated derivation and use the simplified loss abo
 If you’d like to understand the full math, check out [**Lil'Log's post**](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) or [**The AI Summer’s guide**](https://theaisummer.com/diffusion-models/). Both resources give detailed explanations of the math and intuition behind it.
 
 **So in short:**
-- We add noise to data (the forward process).
+- We gradually add noise to data (the forward process).
 - The model learns to remove that noise (the reverse process).
-- We train it by minimizing the difference between actual noise and predicted noise.
+- The model aims to minimize the difference between actual noise and predicted noise.
 
 ---
 ### Diffusion models in environmental system science 🌍
-The Earth’s environment is an intricate web of interacting systems. From regular daily temperature shifts to extremes events like droughts, hailstorms, and the El Niño–Southern Oscillation (ENSO), natural variability drives much of the planet’s behavior. These fluctuations shape water availability, agricultural yields, transportation safety, and even energy production. Accurate and timely forecasts of such variability are therefore essential — enabling societies to prepare for hazards, optimize renewable energy use, and adapt to a changing climate.
+Earth’s environment is a complex network of interacting systems. From everyday temperature changes to extreme events like droughts, hailstorms, and El Niño, natural variability shapes nearly every aspect of our planet’s behavior. These fluctuations influence water supply, agriculture, transportation, and energy production. Accurate forecasts of such variability are crucial—they help societies prepare for hazards, manage renewable resources efficiently, and adapt to a changing climate.
 
-In recent years, diffusion models have opened a new path for data-driven Earth and environmental system simulations, one that differs sharply from both classical numerical models and earlier neural networks such as GANs or VAEs. Rather than mapping inputs to outputs in a single deterministic step, diffusion models generate spatio-temporal fields by progressively refining random noise—each iteration learning how real environmental patterns emerge from stochastic variability.
+Diffusion models offer a fresh approach to simulating Earth and environmental systems. Unlike traditional numerical models or earlier neural networks such as GANs and VAEs, diffusion models don’t rely on a single, fixed mapping from inputs to outputs. Instead, they start with random noise and gradually refine it over many steps, learning how realistic environmental patterns emerge from underlying randomness.
 
 {{< figure
   src="images/Guilloteau2024.gif"
   alt="Diffusion model"
-  caption="Diffusion-based Ensemble Rainfall estimation from Satellite. Source [Guilloteau et al., (2025)](https://ieeexplore.ieee.org/abstract/document/10912662)"
+  caption="Diffusion-based Ensemble Rainfall estimation from Satellite (DifERS). Source [Guilloteau et al., (2025)](https://ieeexplore.ieee.org/abstract/document/10912662)"
 >}}
 
-[Guilloteau et al. (2025)](https://ieeexplore.ieee.org/abstract/document/10912662) present a generative diffusion model for producing probabilistic ensembles of precipitation maps conditioned on multisensor satellite observations. Their framework integrates physical and statistical reasoning, using diffusion-based generative learning to reconstruct fine-scale rainfall structures from coarse satellite inputs. Unlike traditional deterministic downscaling or regression models, the diffusion approach captures spatial uncertainty and variability inherent in precipitation processes, resulting in physically consistent rainfall ensembles. This method demonstrates the potential of diffusion models to enhance probabilistic rainfall estimation and satellite-based hydrological prediction.
+An example comes from [Guilloteau et al., (2025)](https://ieeexplore.ieee.org/abstract/document/10912662), who developed a generative diffusion framework called DifERS for producing ensembles of precipitation maps from multisensor satellite data. Their method combines physical insight with statistical learning to reconstruct detailed rainfall patterns from coarse satellite inputs. Two novelties of their method thus are: 1) the handling of the uncertainty through the generation of ensembles of equiprobable realizations and 2) the use of coincident measurements from different instruments and different platforms.
 
 Because diffusion models explicitly model the distribution of states rather than just the mean response, they are particularly well-suited for capturing uncertainty, extremes, and multi-scale variability—features that are notoriously difficult for traditional deep learning architectures. For instance, recent studies [[Bassetti et al, 2024](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS004194), [Hess et al, 2025](https://www.nature.com/articles/s42256-025-00980-5)] have shown that diffusion-based emulators can reconstruct fine-scale rainfall structures from coarse reanalysis data while preserving the physical coherence of storm systems, something most conventional downscaling models tend to blur.
 
