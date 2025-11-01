@@ -1,0 +1,51 @@
+/* Center Hugo figure shortcode content */
+.figure,
+figure {
+    text-align: center;
+    margin: 1.5em auto;
+}
+
+.figure img,
+figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+.figure figcaption,
+figure figcaption {
+    font-size: 0.85rem !important; /* adjust bigger if you want */
+    text-align: center;
+    font-style: italic;
+    color: var(--fg-light);
+    margin-top: 0.5em;
+}
+
+/* Increase font size for figure captions inside posts */
+.post-single .post-content figcaption p {
+    font-size: 0.85rem !important; /* adjust bigger if you want */
+    line-height: 1.45;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+/* Hugo Goldmark footnote hr */
+.footnotes hr {
+    display: none !important;
+}
+
+/* Make footnote (References) text smaller */
+.footnotes,
+.footnotes p,
+.footnotes li {
+    font-size: 0.75rem; /* adjust as needed */
+    line-height: 1.4;
+}
+
+/* Single post pages */
+.single .post-description,
+h1.post-title + .post-description {
+    font-size: 1rem !important;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 1.6;
+}

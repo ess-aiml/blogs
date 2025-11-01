@@ -1,5 +1,6 @@
 ---
 title: "Diffusion Models: Principles and Applications in Earth Sciences - Part 1"
+description: "A beginner-friendly introduction to diffusion models: from noise to meaningful structure - with insight for Earth science"
 summary: "A beginner’s guide to diffusion models"
 date: 2025-10-28
 tags: ["Diffusion Model", "Generative", "Earth system"]
@@ -26,7 +27,7 @@ math: true
 cover:
     image: "images/Earth_diffusion.jpg" # image path/url
     alt: "<alt text>" # alt text
-    caption: "Photo created by AI" # display caption under cover
+    caption: Image created by author using AI
     relative: true # when using page bundles set this to true
     hidden: false          # don't hide globally
     hiddenInList: true     # hide in list pages
@@ -40,13 +41,14 @@ editPost:
 Diffusion models have become one of the most powerful tools in artificial intelligence (AI). They’re the engines behind some of today's most advanced ***generative systems*** -- from creating realistic images, audio, text, and videos to designing new molecules and medicines, and even modeling complex climate and environmental systems.
 
 There are already plenty of great articles that dive into the details of diffusion models -- and we’ll share some of our favorites along the way. In this series, we'll keep thing simple: we focus on the core principles (this post) and explore how diffusion models are being used in Earth and environmental science, and why those applications are so promising and exciting (see Part 2 - in preparation).
-<!--(see [Part 2]({{< relref "../Intro-Diffusion-Models-part2/index.md" >}})).
--->
+
 Let’s get started!
+
+<center> <span style="letter-spacing: 0.75rem;">• • •</span> </center>
 
 ## What are generative models?
 
-> *Generative models are a type of AI systems that learn the underlying structure of existing data and use it to create new content that resembles to the original.*
+>*<mark>Generative models are a type of AI systems that learn the underlying structure of existing data and use it to create new content that resembles to the original.</mark>*
 
 What does this mean in practice? Suppose we have a dataset containing photos of dogs.
 A generative model can study all those images to learn what makes a picture look like a dog - the shapes, colors, textures, and relationships between pixels. Once trained, the model can then generate completely new, realistic images of dogs that did not exist in the original dataset.
@@ -57,24 +59,24 @@ Generative models are also ***probabilistic***, meaning they don’t always prod
 {{< figure
   src="images/generative_modeling.jpg"
   alt="Generative"
-  caption="Figure 1: A generative model learns features from the training dataset and can generate new, high-quality images. Source: Photo from [Tanishq Mathew Abraham](https://x.com/iscienceluvr/status/1592860024657051649)."
+  caption="A generative model learns features from the training dataset and can generate new, high-quality images ([Source](https://x.com/iscienceluvr/status/1592860024657051649))."
 >}}
 
-There are different types of generative models, such as [Generative Adversarial Networks](https://arxiv.org/pdf/1406.2661) (GANs), [Variational Autoencoders](https://arxiv.org/abs/1312.6114) (VAEs), [flow-based models](https://en.wikipedia.org/wiki/Flow-based_generative_model), and [diffusion models](https://en.wikipedia.org/wiki/Diffusion_model). Each type has its strengths and weaknesses, but diffusion models have recently shown outstanding performance in producing high-quality, realistic results. Their success largely comes from their ability to progressively refine noise, allowing them to capture complex data distributions and produce stable, high-fidelity results without the training instability common in other generative approaches.
+There are different types of generative models, such as Generative Adversarial Networks<cite>[^Goodfellow:2014]</cite> (GANs), Variational Autoencoders<cite>[^Kingma2014]</cite> (VAEs), flow-based models<cite>[^Kingma2018]</cite>, and diffusion models<cite>[^Sohl-Dickstein2015]<sup>,</sup>[^Ho2020]</cite>. Each type has its strengths and weaknesses, but diffusion models have recently shown outstanding performance in producing high-quality, realistic results. Their success largely comes from their ability to progressively refine noise, allowing them to capture complex data distributions and produce stable, high-fidelity results without the training instability common in other generative approaches.
 We’ll focus on diffusion models in this series.
-
 
 {{< figure
   src="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/generative-overview.png"
   alt="Generative"
-  caption="Figure 2: Computation graphs of prominent generative models. Source: [Lil'Log](https://lilianweng.github.io/)"
+  caption="Computation graphs of prominent generative models. Source: [Lil'Log](https://lilianweng.github.io/)"
 >}}
 
+<center> <span style="letter-spacing: 0.75rem;">• • •</span> </center>
 
 ## What are diffusion models?
-Diffusion models are inspired by non-equilibrium thermodynamics in physics -- specifically, how particles spread out or "diffuse" over time. The core idea behind them is similar and simple: we gradually corrupt (add noise to) clean data until it becomes completely random, then train a deep learning model to reverse this process and recover the original data.
+Diffusion models are inspired by non-equilibrium thermodynamics -- specifically, how particles spread out or "diffuse" over time. ***The core idea behind them is simple:*** we gradually corrupt (add noise to) clean data until it becomes completely random, then train a deep learning model to reverse this process and recover the original data.
 
-> *Diffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.*
+> *<mark>Diffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.</mark>*
 
 In other words, diffusion models learn how to "undo" noise. Imagine taking a blurry or noisy satellite image and carefully sharpening it, one small step at a time, until continents and clouds slowly come back into focus. Each step removes a bit of noise, turning random patterns into something meaningful.
 
@@ -83,7 +85,9 @@ In principle, if we start from pure random noise, we should be able to keep appl
 >*For a more intuitive explanation, check out [this article](https://erdem.pl/2023/11/step-by-step-visual-introduction-to-diffusion-models) -- it provides an interactive, step-by-step introduction that makes diffusion models much easier to grasp.*
 
 Diffusion models come in different forms, depending on how they add and remove noise -- some are probabilistic, while others are deterministic.
-One of the most important and widely used approaches is the [Denoising Diffusion Probabilistic Model](https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf) (DDPM), which has become the basis for many breakthroughs in generative AI.
+One of the most important and widely used approaches is the [Denoising Diffusion Probabilistic Model](https://proceedings.neurips.cc/paper/2020/file/4c5bcfec8584af0d967f1ab10179ca4b-Paper.pdf)<cite>[^Ho2020]</cite> (DDPM), which has become the basis for many breakthroughs in generative AI.
+
+<center> <span style="letter-spacing: 0.75rem;">• • •</span> </center>
 
 ## How do diffusion models work?
 Now, let’s explore how DDPMs actually work.
@@ -92,7 +96,7 @@ At their core, DDPMs involve two distinct stochastic processes: a ***forward dif
 {{< figure
   src="images/diffusion_processes.jpg"
   alt="Diffusion model"
-  caption="Figure 3: Forward and reverse diffusion processes."
+  caption="Forward and reverse diffusion processes."
 >}}
 
 ### Forward process
@@ -114,8 +118,9 @@ $$
 $$
 
 Since the sum of two Gaussian variables with variances $\sigma^2_1$ and $\sigma^2_2$ is also Gaussian with variance $\sigma^2_1+\sigma^2_2$, and given that $\boldsymbol{\epsilon}\_{t-1} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$, if $\mathbf{x}\_{t-1}$ has zero mean and unit variance, then so does $\mathbf{x}_{t}$, because $\sqrt{1-\beta\_t}^2 + \sqrt{\beta\_t}^2=1$.
-This way, if we normalize our original sample $\mathbf{x}\_{0}$ to have zero mean and unit variance, then the sequence $\mathbf{x}_1, \dots, \mathbf{x}_T$ will also maintain these properties and $\mathbf{x}_T$ will approximate a standard Gaussian distribution for sufficiently large $T$.
-This scaling ensures that the variance remains stable throughout the diffusion process.
+
+<mark>This way, if we normalize our original sample $\mathbf{x}\_{0}$ to have zero mean and unit variance, then the sequence $\mathbf{x}_1, \dots, \mathbf{x}_T$ will also maintain these properties and $\mathbf{x}_T$ will approximate a standard Gaussian distribution for sufficiently large $T$.
+This scaling ensures that the variance remains stable throughout the diffusion process.</mark>
 
 Another nice property of the above process is that we can jump straight from the original sample $\mathbf{x}_0$ to any noised version of the forward diffusion process $\mathbf{x}_t$ using a clever reparameterization trick as below.
 
@@ -150,17 +155,17 @@ In theory, the reverse diffusion process is defined as $q(\mathbf{x}\_{t-1} \ver
 {{< figure
   src="images/reverse_process.jpg"
   alt="Diffusion model"
-  caption="Figure 4: Reverse diffusion process."
+  caption="Reverse diffusion process."
 >}}
 
 #### Conditioning trick
-Another useful trick in diffusion models is that the reverse transition becomes tractable ***if we condition on the original clean data $\mathbf{x}\_{0}$:***
+Another useful trick in diffusion models is that the reverse transition becomes tractable if we condition on the original clean data $\mathbf{x}\_{0}$:
 $$
 q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0) = \mathcal{N}(\mathbf{x}\_{t-1}; {\tilde{\boldsymbol{\mu}}}(\mathbf{x}\_t, \mathbf{x}\_0), {\tilde{\beta}\_t} \mathbf{I})
 $$
 where $\tilde{\boldsymbol{\mu}}\_t = {\frac{1}{\sqrt{\alpha\_t}} \Big( \mathbf{x}\_t - \frac{1 - \alpha\_t}{\sqrt{1 - \bar{\alpha}\_t}} \boldsymbol{\epsilon}\_t \Big)}$ and $\tilde{\beta}\_t = {\frac{1 - \bar{\alpha}\_{t-1}}{1 - \bar{\alpha}\_t} \beta\_t}$ are closed-form functions derived from the forward process parameters.
 
->*For a detailed derivation, see [Lil'Log's diffusion models post](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/#ldm).*
+>*For a detailed derivation, see [Lil'Log](https://lilianweng.github.io/posts/2021-07-11-diffusion-models) diffusion models post<cite>[^lillog_diff]</cite>.*
 
 *What does this mean?* It means that during training, since we know $\mathbf{x}\_0$, we can compute the exact noise that was added to get $\mathbf{x}\_t$. This allows us to generate training pairs $(\mathbf{x}\_t, \mathbf{\epsilon})$ where $\mathbf{\epsilon}$ is the exact noise, and train a model to predict this noise.
 
@@ -172,7 +177,7 @@ $$
 p\_\theta(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t) \approx q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t).
 $$
 
-> *At each diffusion step, the neural network predicts the noise inside the current noisy sample, then subtracts it accordingly.*
+> *<mark>At each diffusion step, the neural network predicts the noise inside the current noisy sample, then subtracts it accordingly.</mark>*
 
 Since each step in the forward diffusion adds only a small amount of Gaussian noise, the reverse steps can also be modeled as Gaussian transitions:
 
@@ -191,15 +196,13 @@ Note that although the noise added during the forward diffusion is random, it is
 - **Training:** we know $\mathbf{x}\_0$ → compute true noise → train model to predict it
 - **Generation:** we start from pure Gaussian noise → model predicts noise → remove it step by step
 
-### How do diffusion models learn?
+### Train diffusion models
 Training a diffusion model means teaching it to predict and remove noise at each timestep of the reverse process.
 During training, we know both the original clean data $\mathbf{x}\_0$ and its noisy version $\mathbf{x}\_t$ produced by the forward process.
-This lets us compute the true noise $\mathbf{\epsilon}$ added at step $t$.
+This allows us to compute the true noise $\mathbf{\epsilon}$ added at step $t$.
 
-The model's objective is straightforward:
-> **Given a noisy sample $\mathbf{x}\_t$ and a timestep $t$, predict the noise $\mathbf{\epsilon}$ that was added.**
-
-The more accurately it can do this, the better it becomes at reversing the diffusion and generating realistic samples.
+<mark>***The model's objective is straightforward:*** Given a noisy sample $\mathbf{x}\_t$ and a timestep $t,$ predict the noise $\mathbf{\epsilon}$ that was added.
+The more accurately it can do this, the better it becomes at reversing the diffusion and generating realistic samples.</mark>
 
 To train the model, we use a loss function that measures how close the predicted noise is to the true noise:
 $$
@@ -209,23 +212,29 @@ where $\mathbf{x}\_0$ is the original clean data, $\epsilon$ is the Gaussian noi
 
 By minimizing this loss, the model learns to invert each step of the noising process. As training progresses, the model learns to progressively remove noise from any noisy input $\mathbf{x}\_t$, enabling it to generate realistic samples starting from pure random noise.
 
-Behind the scenes, this loss comes from something called the *Variational Lower Bound* (VLB), also called the *evidence lower bound* (ELBO), -- a statistical framework that connects the model’s noise predictions to the overall likelihood of generating real data.
+Behind the scenes, this loss comes from something called the *variational lower bound* (VLB), also called the *evidence lower bound* (ELBO), -- a statistical framework that connects the model’s noise predictions to the overall likelihood of generating real data.
 You can think of it as a mathematical way of ensuring the model learns the most likely way to transform random noise into meaningful patterns.
 
 We skip the full derivation here -- instead, we use the simplified noise-prediction loss, which captures the same idea but is much easier and more efficient to train in practice.
 
->*If you’d like to explore the full mathematical derivation, check out these excellent resources [[1](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/), [2](https://theaisummer.com/diffusion-models/), [3](https://arxiv.org/pdf/2208.11970), [4](https://www.arxiv.org/pdf/2510.21890)]. Each provides a detailed explanation of the theory and intuition behind diffusion models.*
+>*If you’d like to explore the full mathematical derivation, check out these excellent resources<cite>[^lillog_diff]<sup>,</sup>[^theaisummer]<sup>,</sup>[^Lai2025]<sup>,</sup>[^Luo2022]</cite>. Each provides a detailed explanation of the theory and intuition behind diffusion models.*
+
+<center> <span style="letter-spacing: 0.75rem;">• • •</span> </center>
 
 **Quick summary:**
 - We gradually add noise to data (forward process).
 - The model learns to remove the noise (reverse process).
 - Training minimizes the gap between true noise and predicted noise.
 
-In Part 2, we will explore how diffusion models are being used in Earth and environmental sciences.
+<mark>In Part 2, we will explore how diffusion models are being used in Earth and environmental sciences.</mark>
 
-
-<!--> *Note: This means diffusion models can use different neural network architectures depending on the data type, making them flexible for many scientific fields, including Earth science.*-->
-
-<!--Remember that we only know $\mathbf{x}\_0$ during training -- not at generation time. This is where deep learning comes into play. Instead of computing the true reverse transition, we approximate it using a neural network $p\_\theta(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t)$. The training objective is to learn parameters $\theta$ such that:-->
-
-<!--Importantly, the model $p\_\theta(\mathbf{x})$ does not directly predict $\mathbf{x}\_{t-1}$, nor even the specific noise added between $\mathbf{x}\_{t-1}$ and $\mathbf{x}\_{t}$. ***Instead, it predicts the entire noise present in $\mathbf{x}\_{t}$***, then removes a fraction of that noise (based on the state of the variance schedule at that timestep) to obtain $\mathbf{x}\_{t-1}$.-->
+## References
+[^Goodfellow:2014]: Goodfellow, I. et al., 2014. *Generative Adversarial Nets*. Advances in Neural Information Processing Systems (NeurIPS), 27, pp.2672–2680.
+[^Kingma2014]: Kingma, D.P. & Welling, M., 2014. *Auto-Encoding Variational Bayes*. Proceedings of the International Conference on Learning Representations (ICLR) 2014.
+[^Kingma2018]: Kingma, D.P. & Dhariwal, P., 2018. *Glow: Generative Flow with Invertible 1×1 Convolutions*. In: Advances in Neural Information Processing Systems 31 (NeurIPS 2018), Montréal, Canada. Available at: https://arxiv.org/abs/1807.03039.
+[^Sohl-Dickstein2015]: Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N. & Ganguli, S., 2015. *Deep unsupervised learning using nonequilibrium thermodynamics*. Proceedings of the 32nd International Conference on Machine Learning (ICML), PMLR, 37, pp.2256–2265.
+[^Ho2020]: Ho, J., Jain, A., & Abbeel, P. (2020). *Denoising Diffusion Probabilistic Models*. In Advances in Neural Information Processing Systems 33 (NeurIPS 2020) (pp. 6840-6851).
+[^lillog_diff]: https://lilianweng.github.io/posts/2021-07-11-diffusion-models
+[^theaisummer]: https://theaisummer.com/diffusion-models
+[^Lai2025]: Lai, C.-H., Song, Y., Kim, D., Mitsufuji, Y. & Ermon, S., 2025. *The Principles of Diffusion Models*. arXiv preprint arXiv:2510.21890. Available at: https://www.arxiv.org/pdf/2510.21890
+[^Luo2022]: Luo, C., 2022. *Understanding Diffusion Models: A Unified Perspective*. arXiv preprint arXiv:2208.11970. Available at: https://arxiv.org/abs/2208.11970

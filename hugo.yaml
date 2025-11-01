@@ -46,7 +46,7 @@ params:
         - "css/custom.css"
     assets:
         css:
-            - "css/extended/figure-center.css"
+            - "css/extended/user.css"
     comments: true
 
 menu:
@@ -79,3 +79,8 @@ menu:
 caches:
     images:
         dir: :cacheDir/images
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
