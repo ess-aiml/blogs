@@ -22,7 +22,7 @@ params:
     socialIcons:
         - name: "cv"
           title: "Contributing your posts"
-          url: "https://github.com/ess-aiml/blogs/blob/main/CONTRIBUTING.md"
+          url: "https://github.com/ess-community/aiml-blogs/blob/main/CONTRIBUTING.md"
         - name: deezer
           title: "ESS AI/ML Working Group"
           url: "https://esscommunity.org/working-groups/ai-ml/"

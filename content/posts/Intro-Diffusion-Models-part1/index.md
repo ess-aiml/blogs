@@ -26,12 +26,12 @@ math: true
 
 cover:
     image: "images/Earth_diffusion.jpg" # image path/url
-    relative: true # when using page bundles set this to true
+    relative: false # when using page bundles set this to true
     hidden: false          # don't hide globally
     hiddenInList: true     # hide in list pages
     hiddenInSingle: false  # show inside post
 editPost:
-    URL: "https://github.com/ess-aiml/blogs/blob/main/content"
+    URL: "https://github.com/ess-community/aiml-blogs/blob/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
