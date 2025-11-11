@@ -1,4 +1,4 @@
-baseURL: "https://ess-aiml.github.io/blogs/"
+baseURL: "https://ess-community.github.io/aiml-blogs/"
 languageCode: en-us
 title: ESS-AI/ML
 theme: "PaperMod"
