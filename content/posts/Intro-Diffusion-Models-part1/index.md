@@ -55,7 +55,7 @@ Generative models are also ***probabilistic***, i.e., they don’t always produc
 
 
 {{< figure
-  src="images/generative_modeling.jpg"
+  src="../../images/generative_modeling.jpg"
   alt="Generative"
   caption="A generative model learns features from the training data and can generate new, high-quality contents ([Source](https://x.com/iscienceluvr/status/1592860024657051649))."
 >}}
@@ -64,7 +64,7 @@ There are different types of generative models, such as Generative Adversarial N
 We’ll focus on diffusion models in this series.
 
 {{< figure
-  src="images/generative-overview.png"
+  src="../../images/generative-overview.png"
   alt="Generative"
   caption="Computation graphs of prominent generative models. Source: [Lil'Log](https://lilianweng.github.io/)"
 >}}
@@ -77,7 +77,7 @@ Diffusion models are inspired by non-equilibrium thermodynamics -- specifically,
 > *<mark>Diffusion models are a class of generative models that learn to reverse a gradual noising process applied to data, enabling them to generate realistic samples from the underlying data distributions by iteratively denoising random noise.</mark>*
 
 {{< figure
-  src="images/satellite_diffusion.gif"
+  src="../../images/satellite_diffusion.gif"
   alt="Diffusion model"
 >}}
 
@@ -98,7 +98,7 @@ Now, let’s explore how DDPMs actually work.
 At their core, DDPMs involve two distinct stochastic processes: a ***forward diffusion pass*** -- where noise is gradually added to data until it becomes purely random, and a ***reverse denoising process*** -- where the model learns to remove that noise step by step to reconstruct the original data.
 
 {{< figure
-  src="images/diffusion_processes.jpg"
+  src="../../images/diffusion_processes.jpg"
   alt="Diffusion model"
 >}}
 
@@ -163,7 +163,7 @@ Once trained, it can start from pure Gaussian noise and iteratively apply this r
 In theory, the reverse diffusion process is defined as $q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t)$ -- meaning that given a noisy sample $\mathbf{x}\_t$, we would like to compute the distribution of the previous, slightly less noisy sample $\mathbf{x}\_{t-1}$. However, this distribution is ***intractable*** in practice because it depends on the entire (unknown) data distribution.
 
 {{< figure
-  src="images/reverse_process.jpg"
+  src="../../images/reverse_process.jpg"
   alt="Diffusion model"
   caption="Reverse denoising process."
 >}}
